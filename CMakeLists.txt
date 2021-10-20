@@ -58,7 +58,7 @@ endif()
 
 # Find Armadillo and link it.
 find_package(Armadillo 9.800.0 REQUIRED)
-target_link_libraries(ensmallen INTERFACE Armadillo::Armadillo)
+target_link_libraries(ensmallen INTERFACE ${Armadillo_LIBRARIES})
 
 # Set helper variables for creating the version, config and target files.
 include(CMakePackageConfigHelpers)
